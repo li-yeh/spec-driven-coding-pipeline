@@ -1,5 +1,9 @@
 # Spec-Driven Autonomous Coding Pipeline
 
+[![CI](https://github.com/li-yeh/spec-driven-coding-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/li-yeh/spec-driven-coding-pipeline/actions/workflows/ci.yml)
+![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 **English** | [繁體中文](README.zh-TW.md)
 
 A **spec-driven**, 6-stage autonomous coding and stateless red-team review pipeline built on **Python Watchdog**, **PyMuPDF visual detection**, and **Antigravity CLI (`agy`)**. Drop a project folder containing a technical specification (`.pdf` or `spec.md`), and the pipeline automates specification ingestion, dynamic model routing, plan auditing, implementation, local build/test verification, stateless review, and domain-based archiving inside an isolated sandbox.
@@ -193,7 +197,7 @@ uv run pytest
 - [x] 6-stage sandboxed pipeline with dynamic `agy models` routing
 - [x] Stateless review (`/goldfish`) & PDF visual element detection
 - [ ] Integrate local Ollama (3B) for log compression and pre-filtering
-- [ ] Add GitHub Actions CI for automated `pytest` checks
+- [x] Add GitHub Actions CI for automated `pytest` checks
 - [ ] Fine-tune a lightweight local router model for strict JSON planning
 
 ---

@@ -1,5 +1,9 @@
 # Spec-Driven Autonomous Coding Pipeline
 
+[![CI](https://github.com/li-yeh/spec-driven-coding-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/li-yeh/spec-driven-coding-pipeline/actions/workflows/ci.yml)
+![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 [English](README.md) | **繁體中文**
 
 一套以**技術規格書為單一真實來源（Spec-Driven）**的 6 階段自主開發與無狀態紅隊審查管線。結合 **Python Watchdog**、**PyMuPDF 視覺元素偵測** 與 **Antigravity CLI (`agy`)**，將「讀規格 → 動態規劃 → 結構審計 → 程式碼實作 → 真機驗證除錯 → 無狀態失憶審查 → 分類歸檔」自動化為可重複、可審計、具沙盒防護的本機工作流。
@@ -157,7 +161,7 @@ uv run pytest
 - [x] 6 階段沙盒隔離管線與動態 `agy models` 模型路由
 - [x] 無狀態紅隊審查（`/goldfish`）與 PDF 視覺元素偵測
 - [ ] 整合本機 Ollama（3B）進行日誌壓縮與前置雜訊過濾
-- [ ] 加入 GitHub Actions CI 自動執行 `pytest` 測試檢查
+- [x] 加入 GitHub Actions CI 自動執行 `pytest` 測試檢查
 - [ ] 微調輕量級本機路由模型，產出嚴格合規的 JSON 規劃藍圖
 
 ---
