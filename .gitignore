@@ -1,0 +1,38 @@
+# Virtual environments & Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Backups & editor files
+*.bak
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local pipeline configuration & runtime directories
+config.yaml
+dropzone/
+active_sandbox/
+processed_drops/
+needs_review/
+archive/
+
+# Pipeline control & temporary artifacts
+_CLEAN_SPEC.md
+_FILE_TREE.txt
+_AVAILABLE_*.txt
+_PLAN.json
+_spec_page_*.png
+*_spec_page_*.png
+_ai_tmp/
+AI_FINAL_REVIEW.md

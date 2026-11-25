@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spec-driven-coding-pipeline"
+version = "0.1.0"
+description = "A spec-driven 6-stage autonomous coding and stateless red-team review pipeline built on Watchdog and Antigravity CLI."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    "watchdog>=4.0",
+    "pypdf>=4.0",
+    "pymupdf>=1.24",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+spec-pipeline = "pipeline.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

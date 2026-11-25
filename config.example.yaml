@@ -1,0 +1,37 @@
+# Spec-Driven Autonomous Coding Pipeline Configuration Template
+# Copy this file to config.yaml and customize for your local environment:
+#   cp config.example.yaml config.yaml
+# You may also point to another path via the PIPELINE_CONFIG environment variable.
+
+# Monitored dropzone directory (drop task folders containing a .pdf or spec.md here)
+watch_dir: "./dropzone"
+
+# Isolated execution sandbox (cleared and recreated cleanly before each task)
+sandbox_dir: "./active_sandbox"
+
+# Destination for original drop packages after verification succeeds
+processed_dir: "./processed_drops"
+
+# Quarantine directory for tasks that fail final review or abort unexpectedly
+needs_review_dir: "./needs_review"
+
+# Fallback archive domain key when classification does not match a specific route
+default_domain: "GENERAL"
+
+# Prompt and review output language: "en" (English) or "zh-TW" (Traditional Chinese)
+prompt_language: "zh-TW"
+
+# Prefer Google (gemini-*) model IDs when fetching live models to preserve external quota
+prefer_google_models: true
+
+# Optional extra directories appended to subprocess PATH (e.g., local compiler/simulator bins)
+extra_tool_dirs: []
+# extra_tool_dirs:
+#   - "/usr/local/bin"
+
+# Domain-based archive routing table (Stage 1 classifies each task into one of these keys)
+archive_routes:
+  HARDWARE_RTL: "./archive/hardware"
+  SOFTWARE_BACKEND: "./archive/software"
+  ALGORITHMS: "./archive/algorithms"
+  GENERAL: "./archive/general"
